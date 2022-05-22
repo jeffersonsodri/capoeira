@@ -1,13 +1,13 @@
-import style from '../styles/Home.module.css'
-
+import styles from '../styles/Home.module.css'
+import Botao from '../components/Botao'
 
 
 export default function Home() {
   
   return(
-    <div>
+    <div className={styles.container}>
       <h1>Jefferson é o melhor</h1>
-      <a  className={style.botao} href={'/obrigado'} >Clique aqui</a>
+      <Botao  rota={'/obrigado'} >Página de Obrigado</Botao>
     </div>
   )
 }
