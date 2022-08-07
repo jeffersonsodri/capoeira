@@ -1,12 +1,24 @@
 
 import styles from '../styles/Botao.module.css'
-import animation from '../styles/Animation.module.css'
+import { useState, useEffect } from 'react';
+
 export default function Botao(props) {
   
 
+  const [timerButon, setTimeButon] = useState();
+
+  useEffect(() => {
+    const timerButton = setTimeout(()=> {
+      console.log("Agora Apareci")
+      setTimeButon(1)
+    }, 3000)
+    return () => clearTimeout(timerButton);
+  }, []);
+
+
   return (
     <div>
-      <a className={styles.botao}  href={props.rota} >{props.children} </a>
+      <a className={styles.botao} style={{display: timerButon ? '' : 'none'}} href={props.rota} >{props.children} </a>
     </div>
   )
 }
