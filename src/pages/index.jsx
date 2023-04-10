@@ -1,10 +1,10 @@
-import styles from '../styles/Home.module.css'
-import Botao from '../components/Botao'
 import Image from 'next/image'
-import animation from '../styles/Animation.module.css'
-import paradaDeMao from '../../public/images/paradaDeMao.png'
 import logo from '../../public/images/logo.png'
+import paradaDeMao from '../../public/images/paradaDeMao.png'
+import Botao from '../components/Botao'
 import Wave from '../components/Wave'
+import styles from '../styles/Home.module.css'
+import SalesButton from "../components/SalesButton";
 
 export default function Home() {
   
@@ -18,6 +18,7 @@ export default function Home() {
         <div >Aprenda o passo a passo ensinado pelos grandes mestres da capoeira Brasileira</div>
         <p></p>
         <Image src={paradaDeMao} className={styles.paradaDeMao}></Image>
+        <SalesButton  text="Comprar Agora"/>
         <Botao  rota={'/obrigado'} >Quero Aprender Capoeira</Botao><p></p>
       </div>
         <Wave></Wave>
