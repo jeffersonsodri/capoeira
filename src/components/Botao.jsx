@@ -9,7 +9,6 @@ export default function Botao(props) {
 
   useEffect(() => {
     const timerButton = setTimeout(()=> {
-      console.log("Agora Apareci")
       setTimeButon(1)
     }, 3000)
     return () => clearTimeout(timerButton);
